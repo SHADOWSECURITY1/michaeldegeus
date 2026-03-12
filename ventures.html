@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Michael de Geus — Builder. Strategist. Author.</title>
+  <title>Ventures — Michael de Geus</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@200;300;400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,600&display=swap" rel="stylesheet">
@@ -244,7 +244,7 @@
   <ul class="nav-links">
     <li><a href="index.html#about">About</a></li>
     <li><a href="origin.html">Origin</a></li>
-    <li><a href="ventures.html">Ventures</a></li>
+    <li><a href="ventures.html" class="active">Ventures</a></li>
     <li><a href="playbook.html">Playbook</a></li>
     <li><a href="method.html">Method</a></li>
     <li><a href="index.html#contact">Contact</a></li>
@@ -252,81 +252,110 @@
   <a href="index.html#contact" class="nav-cta">Engage</a>
 </nav>
 
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-scanline"></div>
-  <div class="hero-gold-bar"></div>
-  <div class="hero-content">
-    <div class="hero-eyebrow">Builder &nbsp;·&nbsp; Strategist &nbsp;·&nbsp; Author &nbsp;·&nbsp; Speaker &nbsp;·&nbsp; Board Member</div>
-    <h1 class="hero-name">Michael<br><span>de Geus</span></h1>
-    <div class="hero-subtitle">Security · Ventures · Special Operations</div>
-    <p class="hero-tagline">Ten ventures. One security framework used by Fortune 500s. A book written while running the operations it describes. The résumé reads like fiction — the outcomes are documented.</p>
-    <div class="hero-actions">
-      <a href="playbook.html" class="btn-primary">The Playbook</a>
-      <a href="ventures.html" class="btn-ghost">Explore Ventures</a>
-    </div>
-  </div>
-  <div class="hero-scroll">Scroll to explore</div>
-</section>
-
-<!-- MARQUEE -->
-<div id="marquee">
-  <div class="marquee-track">
-    <div class="marquee-item"><strong>10</strong> Ventures Founded</div>
-    <div class="marquee-item"><strong>Fortune 500</strong> Security Frameworks</div>
-    <div class="marquee-item"><strong>Author</strong> · The Corporate Security Playbook</div>
-    <div class="marquee-item"><strong>Shadow</strong> · Tactical Intelligence Platform</div>
-    <div class="marquee-item"><strong>Tee Sleeves</strong> · Apparel Innovation</div>
-    <div class="marquee-item"><strong>Hero Diving</strong> · Marine Operations</div>
-    <div class="marquee-item"><strong>Special Operations</strong> Veteran</div>
-    <div class="marquee-item"><strong>Builder</strong> · Strategist · Operator</div>
-    <div class="marquee-item"><strong>10</strong> Ventures Founded</div>
-    <div class="marquee-item"><strong>Fortune 500</strong> Security Frameworks</div>
-    <div class="marquee-item"><strong>Author</strong> · The Corporate Security Playbook</div>
-    <div class="marquee-item"><strong>Shadow</strong> · Tactical Intelligence Platform</div>
-    <div class="marquee-item"><strong>Tee Sleeves</strong> · Apparel Innovation</div>
-    <div class="marquee-item"><strong>Hero Diving</strong> · Marine Operations</div>
-    <div class="marquee-item"><strong>Special Operations</strong> Veteran</div>
-    <div class="marquee-item"><strong>Builder</strong> · Strategist · Operator</div>
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-bg"></div>
+  <div class="page-header-bar"></div>
+  <div class="page-header-content">
+    <div class="page-header-eyebrow">The Portfolio</div>
+    <h1 class="page-header-title">Ten ventures.<br><em>One operating system.</em></h1>
+    <p class="page-header-sub">Security platforms. Tactical gear. Performance beverages. Apparel innovation. Marine operations. The industries differ. The founding philosophy is identical.</p>
   </div>
 </div>
 
-<!-- ABOUT -->
-<section id="about">
+<!-- VENTURES -->
+<section id="ventures">
   <div class="section-wrap">
-    <div class="about-grid">
-      <div class="about-visual reveal">
-        <div class="about-photo-frame">
-          <img src="headshot.jpg" alt="Michael de Geus">
+    <div class="ventures-header">
+      <div>
+        <div class="section-label reveal">The Portfolio</div>
+        <h2 class="section-title reveal">Ten ventures.<br><em>One philosophy.</em></h2>
+      </div>
+      <p class="reveal">Each venture was built from the same founding conviction: that the gap between what exists and what should exist is an opportunity, not a complaint.</p>
+    </div>
+    <div class="ventures-tabs">
+      <button class="vtab active" onclick="filterV('all',this)">All Ventures</button>
+      <button class="vtab" onclick="filterV('security',this)">Security</button>
+      <button class="vtab" onclick="filterV('apparel',this)">Apparel</button>
+      <button class="vtab" onclick="filterV('marine',this)">Marine</button>
+      <button class="vtab" onclick="filterV('beverage',this)">Beverage</button>
+      <button class="vtab" onclick="filterV('gear',this)">Tactical Gear</button>
+    </div>
+    <div class="ventures-grid">
+      <div class="venture-card featured show" data-cat="security">
+        <div class="vc-cat">Security · Intelligence</div>
+        <div class="vc-icon">SH</div>
+        <div class="vc-name">Shadow</div>
+        <div class="vc-role">Founder & CEO</div>
+        <p class="vc-desc">The tactical intelligence and security platform built from field-tested frameworks. Used by Fortune 500 organizations for threat assessment, executive protection protocol design, and crisis response training. Shadow distilled years of operational experience into tools that security teams can actually use.</p>
+        <div class="vc-tags">
+          <span class="tag">Corporate Security</span>
+          <span class="tag">Intelligence</span>
+          <span class="tag">Risk Assessment</span>
+          <span class="tag">Executive Protection</span>
         </div>
-        <div class="about-badge">
-          <div class="badge-num">10</div>
-          <div class="badge-text">Ventures<br>Founded</div>
+        <a href="https://www.shdw.com" class="vc-link" target="_blank" rel="noopener">Visit</a>
+      </div>
+      <div class="venture-card show" data-cat="apparel">
+        <div class="vc-cat">Apparel · Innovation</div>
+        <div class="vc-icon">TS</div>
+        <div class="vc-name">Tee Sleeves</div>
+        <div class="vc-role">Founder</div>
+        <p class="vc-desc">A purpose-built apparel solution that solved a real problem elegantly. The same operational thinking that informs security protocol design informed the product architecture here — identify the gap, build the solution, validate with users who actually have the problem.</p>
+        <div class="vc-tags">
+          <span class="tag">Apparel</span>
+          <span class="tag">Consumer Products</span>
+          <span class="tag">Direct to Consumer</span>
+        </div>
+        <a href="https://www.teesleeves.com" class="vc-link" target="_blank" rel="noopener">Visit</a>
+      </div>
+      <div class="venture-card show" data-cat="marine">
+        <div class="vc-cat">Marine · Operations</div>
+        <div class="vc-icon">HD</div>
+        <div class="vc-name">Hero Diving &amp; Marine</div>
+        <div class="vc-role">Founder</div>
+        <p class="vc-desc">Marine operations and diving services built on the same standards Michael applied in operational environments. When the water is the terrain, precision and preparation aren't optional — they're the product.</p>
+        <div class="vc-tags">
+          <span class="tag">Marine</span>
+          <span class="tag">Diving</span>
+          <span class="tag">Operations</span>
+        </div>
+        <a href="https://www.herodivingandmarine.com" class="vc-link" target="_blank" rel="noopener">Visit</a>
+      </div>
+      <div class="venture-card show" data-cat="beverage">
+        <div class="vc-cat">Beverage · Performance</div>
+        <div class="vc-icon">PF</div>
+        <div class="vc-name">Performance Fuel</div>
+        <div class="vc-role">Co-Founder</div>
+        <p class="vc-desc">A performance beverage line built for people who operate at high intensity and need formulations that match. Developed from the ground up with the same attention to efficacy that defines Michael's approach to every product category he enters.</p>
+        <div class="vc-tags">
+          <span class="tag">Beverage</span>
+          <span class="tag">Performance</span>
+          <span class="tag">CPG</span>
         </div>
       </div>
-      <div class="about-text">
-        <div class="section-label reveal">About Michael</div>
-        <p class="about-intro reveal">He built a security framework now used by Fortune 500 companies. He founded ten ventures across sectors that have no obvious throughline — until you meet him.</p>
-        <p class="about-body reveal">Michael de Geus operates at the intersection of tactical intelligence, entrepreneurial strategy, and operational execution. His career has taken him from special operations environments to the boardrooms of multinational corporations — not as a consultant who observes, but as an operator who builds.</p>
-        <p class="about-body reveal">The security platform he developed, <strong style="color:var(--white);">Shadow</strong>, distilled years of field experience into frameworks that Fortune 500 security teams now use to assess, train, and respond. His book, <em>The Corporate Security Playbook</em>, was written while he was actively running the operations it describes.</p>
-        <p class="about-body reveal">The ten ventures span tactical gear, performance beverages, apparel technology, marine operations, and beyond. The industries differ. The founding philosophy is identical: find the elegant solution hiding inside a problem everyone else has given up on.</p>
-        <div class="about-wit reveal">
-          "A friend once described him as '<span>James Bond, Indiana Jones, and MacGyver</span> somehow merged into one person.' Michael's only objection was that Bond always had a bigger budget."
+      <div class="venture-card show" data-cat="gear">
+        <div class="vc-cat">Tactical · Gear</div>
+        <div class="vc-icon">TG</div>
+        <div class="vc-name">Tactical Provisions</div>
+        <div class="vc-role">Founder</div>
+        <p class="vc-desc">Gear designed by someone who has used gear in conditions where failure has consequences. Not aesthetics-first tactical cosplay — functional equipment engineered for operators who need it to work every time.</p>
+        <div class="vc-tags">
+          <span class="tag">Tactical</span>
+          <span class="tag">Equipment</span>
+          <span class="tag">Defense</span>
         </div>
-        <div class="stat-row reveal">
-          <div>
-            <div class="stat-num">10+</div>
-            <div class="stat-label">Ventures Built</div>
-          </div>
-          <div>
-            <div class="stat-num">F500</div>
-            <div class="stat-label">Security Clients</div>
-          </div>
-          <div>
-            <div class="stat-num">1</div>
-            <div class="stat-label">Definitive Book</div>
-          </div>
+      </div>
+      <div class="venture-card show" data-cat="security">
+        <div class="vc-cat">Security · Advisory</div>
+        <div class="vc-icon">OA</div>
+        <div class="vc-name">Operational Advisory</div>
+        <div class="vc-role">Principal</div>
+        <p class="vc-desc">Direct advisory engagements for organizations navigating complex security, operational, or strategic challenges. The complement to Shadow's platform — human intelligence where the platform ends and judgment begins.</p>
+        <div class="vc-tags">
+          <span class="tag">Advisory</span>
+          <span class="tag">Strategy</span>
+          <span class="tag">Security</span>
         </div>
       </div>
     </div>
@@ -335,71 +364,9 @@
 
 <!-- QUOTE BREAK -->
 <div class="quote-break">
-  <p class="quote-text reveal">"A friend once described him as 'James Bond, Indiana Jones, and MacGyver somehow merged into one person.' Michael's only objection was that Bond always had a bigger budget."</p>
-  <div class="quote-attr reveal">— A Colleague</div>
+  <p class="quote-text reveal">"The industries differ. The founding philosophy is identical."</p>
+  <div class="quote-attr reveal">— Michael de Geus</div>
 </div>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-wrap">
-    <div class="contact-inner">
-      <div class="contact-left">
-        <div class="section-label reveal">Get in Touch</div>
-        <h2 class="section-title reveal">Work with<br><em>Michael</em></h2>
-        <p class="contact-body reveal">Whether you're building something new, navigating a security challenge, or looking to engage with someone who has been in the room where it happens — the conversation starts here.</p>
-        <div class="contact-meta reveal">
-          <div class="contact-meta-item">
-            <div class="section-label">Availability</div>
-            <p>Michael takes select engagements — advisory roles, speaking, and strategic partnerships. Reach out to discuss fit.</p>
-          </div>
-          <div class="contact-meta-item">
-            <div class="section-label">Response Time</div>
-            <p>All inquiries reviewed personally. Expect a response within 48–72 hours for substantive requests.</p>
-          </div>
-        </div>
-      </div>
-      <div class="contact-right reveal">
-        <form class="contact-form" onsubmit="return false;">
-          <div class="form-row">
-            <div class="form-field">
-              <label class="form-label">First Name</label>
-              <input class="form-input" type="text" placeholder="James">
-            </div>
-            <div class="form-field">
-              <label class="form-label">Last Name</label>
-              <input class="form-input" type="text" placeholder="Bond">
-            </div>
-          </div>
-          <div class="form-field">
-            <label class="form-label">Email</label>
-            <input class="form-input" type="email" placeholder="you@organization.com">
-          </div>
-          <div class="form-field">
-            <label class="form-label">Organization</label>
-            <input class="form-input" type="text" placeholder="Company or context">
-          </div>
-          <div class="form-field">
-            <label class="form-label">Nature of Inquiry</label>
-            <select class="form-select form-input">
-              <option value="" style="background:#14141c;">Select one</option>
-              <option value="advisory" style="background:#14141c;">Advisory / Strategy</option>
-              <option value="security" style="background:#14141c;">Security Consulting</option>
-              <option value="speaking" style="background:#14141c;">Speaking Engagement</option>
-              <option value="venture" style="background:#14141c;">Venture / Investment</option>
-              <option value="media" style="background:#14141c;">Media / Press</option>
-              <option value="other" style="background:#14141c;">Other</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label class="form-label">Message</label>
-            <textarea class="form-textarea" placeholder="What are you building, solving, or exploring?"></textarea>
-          </div>
-          <button type="submit" class="btn-primary" style="align-self:flex-start;border:none;cursor:crosshair;">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
 
 <footer>
   <a class="footer-logo" href="index.html">Michael de Geus</a>
@@ -448,6 +415,13 @@ const obs=new IntersectionObserver(entries=>{
   });
 },{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+function filterV(cat,btn){
+  document.querySelectorAll('.vtab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.venture-card').forEach(c=>{
+    (cat==='all'||c.dataset.cat===cat)?c.classList.add('show'):c.classList.remove('show');
+  });
+}
 </script>
 </body>
 </html>
