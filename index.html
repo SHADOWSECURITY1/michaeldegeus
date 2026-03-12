@@ -79,9 +79,7 @@
   .about-photo-frame { position:relative; aspect-ratio:3/4; max-width:400px; background:var(--panel); overflow:hidden; }
   .about-photo-frame::before { content:''; position:absolute; inset:0; z-index:1; background:linear-gradient(135deg,rgba(201,168,76,.08) 0%,transparent 55%,rgba(26,42,74,.25) 100%); }
   .about-photo-frame::after { content:''; position:absolute; top:14px; left:14px; right:-14px; bottom:-14px; border:1px solid rgba(201,168,76,.22); z-index:0; }
-  .photo-placeholder { width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; background:linear-gradient(160deg,#0d1020 0%,#141822 100%); gap:10px; }
-  .photo-initials { font-family:'Cormorant Garamond',serif; font-size:5rem; font-weight:300; color:rgba(201,168,76,.35); letter-spacing:.1em; }
-  .photo-label { font-family:'Barlow Condensed',sans-serif; font-size:.58rem; letter-spacing:.32em; text-transform:uppercase; color:rgba(184,194,204,.38); }
+  .about-photo-frame img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; position:relative; z-index:1; }
   .about-visual { position:relative; }
   .about-badge { position:absolute; bottom:-18px; right:-18px; width:112px; height:112px; background:var(--gold); display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:2; }
   .badge-num { font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:700; color:var(--black); line-height:1; }
@@ -326,10 +324,7 @@
     <div class="about-grid">
       <div class="about-visual reveal">
         <div class="about-photo-frame">
-          <div class="photo-placeholder">
-            <div class="photo-initials">MdG</div>
-            <div class="photo-label">Replace with photo</div>
-          </div>
+          <img src="headshot.jpg" alt="Michael de Geus">
         </div>
         <div class="about-badge">
           <div class="badge-num">10<span style="font-size:1.1rem">+</span></div>
