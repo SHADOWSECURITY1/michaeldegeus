@@ -145,14 +145,14 @@
   .step-desc { font-size:.85rem; line-height:1.78; color:var(--silver); }
   .step-wit { margin-top:8px; font-family:'Cormorant Garamond',serif; font-size:.9rem; font-style:italic; color:var(--gold-dim); }
   #ventures { padding:64px 0; background:#0a0a0e; }
-  .ventures-header { display:flex; align-items:flex-end; justify-content:space-between; gap:36px; margin-bottom:48px; }
-  .ventures-header p { max-width:360px; font-size:.88rem; line-height:1.82; color:var(--silver); }
-  .ventures-tabs { display:flex; gap:2px; margin-bottom:20px; flex-wrap:wrap; }
-  .vtab { font-family:'Barlow Condensed',sans-serif; font-size:.63rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--silver); background:rgba(255,255,255,.03); border:1px solid rgba(184,194,204,.12); padding:9px 18px; cursor:crosshair; transition:all .2s; }
-  .vtab.active,.vtab:hover { background:rgba(201,168,76,.12); border-color:rgba(201,168,76,.3); color:var(--gold); }
+  .ventures-group { margin-bottom:80px; }
+  .ventures-group-header { margin-bottom:36px; }
+  .ventures-group-header .section-title { margin-top:12px; font-size:clamp(1.8rem,3.5vw,2.8rem); }
+  .ventures-divider { border:none; border-top:1px solid rgba(201,168,76,.1); margin:0 0 72px; }
   .ventures-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
-  .venture-card { background:var(--panel); padding:38px 30px; position:relative; overflow:hidden; cursor:default; transition:transform .3s,background .3s; display:none; }
-  .venture-card.show { display:block; }
+  .venture-card { background:var(--panel); padding:38px 30px; position:relative; overflow:hidden; cursor:default; transition:transform .3s,background .3s,opacity .3s; display:block; }
+  .venture-card.past { opacity:.6; }
+  .venture-card.past:hover { opacity:1; }
   .venture-card::before { content:''; position:absolute; bottom:0; left:0; width:100%; height:3px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .35s; }
   .venture-card:hover::before { transform:scaleX(1); }
   .venture-card:hover { transform:translateY(-4px); background:#161620; }
@@ -322,99 +322,104 @@
 <!-- VENTURES -->
 <section id="ventures">
   <div class="section-wrap">
-    <div class="ventures-header">
-      <div>
-        <div class="section-label reveal">The Portfolio</div>
-        <h2 class="section-title reveal">Ten ventures.<br><em>One philosophy.</em></h2>
+
+    <!-- CURRENT PROJECTS -->
+    <div class="ventures-group">
+      <div class="ventures-group-header reveal">
+        <div class="section-label">Current Projects</div>
+        <h2 class="section-title">Active &amp; <em>Building</em></h2>
       </div>
-      <p class="reveal">Each venture was built from the same founding conviction: that the gap between what exists and what should exist is an opportunity, not a complaint.</p>
-    </div>
-    <div class="ventures-tabs">
-      <button class="vtab active" onclick="filterV('all',this)">All Ventures</button>
-      <button class="vtab" onclick="filterV('security',this)">Security</button>
-      <button class="vtab" onclick="filterV('apparel',this)">Apparel</button>
-      <button class="vtab" onclick="filterV('marine',this)">Marine</button>
-      <button class="vtab" onclick="filterV('beverage',this)">Beverage</button>
-      <button class="vtab" onclick="filterV('gear',this)">Tactical Gear</button>
-    </div>
-    <div class="ventures-grid">
-      <div class="venture-card featured show" data-cat="security">
-        <div class="vc-cat">Security · Intelligence</div>
-        <div class="vc-icon">SH</div>
-        <div class="vc-name">Shadow</div>
-        <div class="vc-role">Founder & CEO</div>
-        <p class="vc-desc">The tactical intelligence and security platform built from field-tested frameworks. Used by Fortune 500 organizations for threat assessment, executive protection protocol design, and crisis response training. Shadow distilled years of operational experience into tools that security teams can actually use.</p>
-        <div class="vc-tags">
-          <span class="tag">Corporate Security</span>
-          <span class="tag">Intelligence</span>
-          <span class="tag">Risk Assessment</span>
-          <span class="tag">Executive Protection</span>
+      <div class="ventures-grid">
+        <div class="venture-card featured reveal">
+          <div class="vc-cat">Security · Intelligence</div>
+          <div class="vc-icon">SHD</div>
+          <div class="vc-name">Shadow</div>
+          <div class="vc-role">Founder &amp; CEO</div>
+          <p class="vc-desc">The intelligence-first security platform built from field-tested frameworks. Predictive, proactive, and invisible by design — turning ambient signals into protective certainty before threats materialize.</p>
+          <div class="vc-tags"><span class="tag">Corporate Security</span><span class="tag">Intelligence</span><span class="tag">Executive Protection</span></div>
+          <a href="https://www.shdw.com" class="vc-link" target="_blank" rel="noopener">Visit</a>
         </div>
-        <a href="https://www.shdw.com" class="vc-link" target="_blank" rel="noopener">Visit</a>
-      </div>
-      <div class="venture-card show" data-cat="apparel">
-        <div class="vc-cat">Baseball/Softball Innovation</div>
-        <div class="vc-icon">TS</div>
-        <div class="vc-name">Tee Sleeves</div>
-        <div class="vc-role">Founder</div>
-        <p class="vc-desc">A purpose-built apparel solution that solved a real problem elegantly. The same operational thinking that informs security protocol design informed the product architecture here — identify the gap, build the solution, validate with users who actually have the problem.</p>
-        <div class="vc-tags">
-          <span class="tag">Apparel</span>
-          <span class="tag">Consumer Products</span>
-          <span class="tag">Direct to Consumer</span>
+        <div class="venture-card reveal">
+          <div class="vc-cat">AI · Technology</div>
+          <div class="vc-icon">MP</div>
+          <div class="vc-name">Memory Packs</div>
+          <div class="vc-role">Founder</div>
+          <p class="vc-desc">AI intelligence upgrades that give people and organizations a genuine cognitive edge. Built on the premise that the best tools extend human capability without replacing human judgment.</p>
+          <div class="vc-tags"><span class="tag">Artificial Intelligence</span><span class="tag">Technology</span><span class="tag">Productivity</span></div>
         </div>
-        <a href="https://www.teesleeves.com" class="vc-link" target="_blank" rel="noopener">Visit</a>
-      </div>
-      <div class="venture-card show" data-cat="marine">
-        <div class="vc-cat">Marine · Operations</div>
-        <div class="vc-icon">HD</div>
-        <div class="vc-name">Hero Diving &amp; Marine</div>
-        <div class="vc-role">Founder</div>
-        <p class="vc-desc">Marine operations and diving services built on the same standards Michael applied in operational environments. When the water is the terrain, precision and preparation aren't optional — they're the product.</p>
-        <div class="vc-tags">
-          <span class="tag">Marine</span>
-          <span class="tag">Diving</span>
-          <span class="tag">Operations</span>
+        <div class="venture-card reveal">
+          <div class="vc-cat">Baseball/Softball Innovation</div>
+          <div class="vc-icon">TSL</div>
+          <div class="vc-name">Tee Sleeves</div>
+          <div class="vc-role">Founder</div>
+          <p class="vc-desc">A purpose-built solution that solved a real problem for baseball and softball players elegantly. Proof that the same first-principles thinking that works in security works equally well in consumer products.</p>
+          <div class="vc-tags"><span class="tag">Baseball</span><span class="tag">Softball</span><span class="tag">Apparel</span></div>
+          <a href="https://www.teesleeves.com" class="vc-link" target="_blank" rel="noopener">Visit</a>
         </div>
-        <a href="https://www.herodivingandmarine.com" class="vc-link" target="_blank" rel="noopener">Visit</a>
-      </div>
-      <div class="venture-card show" data-cat="beverage">
-        <div class="vc-cat">Beverage · Performance</div>
-        <div class="vc-icon">PF</div>
-        <div class="vc-name">Performance Fuel</div>
-        <div class="vc-role">Co-Founder</div>
-        <p class="vc-desc">A performance beverage line built for people who operate at high intensity and need formulations that match. Developed from the ground up with the same attention to efficacy that defines Michael's approach to every product category he enters.</p>
-        <div class="vc-tags">
-          <span class="tag">Beverage</span>
-          <span class="tag">Performance</span>
-          <span class="tag">CPG</span>
+        <div class="venture-card reveal">
+          <div class="vc-cat">Marine · Operations</div>
+          <div class="vc-icon">HDM</div>
+          <div class="vc-name">Hero Diving &amp; Marine</div>
+          <div class="vc-role">Founder</div>
+          <p class="vc-desc">Professional-grade marine and diving operations where safety is a feature, not a footnote. When the water is the terrain, precision and preparation aren't optional — they're the product.</p>
+          <div class="vc-tags"><span class="tag">Marine</span><span class="tag">Diving</span><span class="tag">Operations</span></div>
+          <a href="https://www.herodivingandmarine.com" class="vc-link" target="_blank" rel="noopener">Visit</a>
         </div>
-      </div>
-      <div class="venture-card show" data-cat="gear">
-        <div class="vc-cat">Tactical · Gear</div>
-        <div class="vc-icon">TG</div>
-        <div class="vc-name">Tactical Provisions</div>
-        <div class="vc-role">Founder</div>
-        <p class="vc-desc">Gear designed by someone who has used gear in conditions where failure has consequences. Not aesthetics-first tactical cosplay — functional equipment engineered for operators who need it to work every time.</p>
-        <div class="vc-tags">
-          <span class="tag">Tactical</span>
-          <span class="tag">Equipment</span>
-          <span class="tag">Defense</span>
+        <div class="venture-card reveal">
+          <div class="vc-cat">Foundation · Ventures</div>
+          <div class="vc-icon">HRO</div>
+          <div class="vc-name">The Hero Foundation &amp; Team HERO</div>
+          <div class="vc-role">Founder</div>
+          <p class="vc-desc">Part foundation, part venture accelerator — built for heroes who deserve a better shot. The Hero Foundation funds mission-driven individuals while Team HERO creates the platform: Shark Tank for Heroes.</p>
+          <div class="vc-tags"><span class="tag">Foundation</span><span class="tag">Venture Funding</span><span class="tag">Mission-Driven</span></div>
         </div>
-      </div>
-      <div class="venture-card show" data-cat="security">
-        <div class="vc-cat">Security · Advisory</div>
-        <div class="vc-icon">OA</div>
-        <div class="vc-name">Operational Advisory</div>
-        <div class="vc-role">Principal</div>
-        <p class="vc-desc">Direct advisory engagements for organizations navigating complex security, operational, or strategic challenges. The complement to Shadow's platform — human intelligence where the platform ends and judgment begins.</p>
-        <div class="vc-tags">
-          <span class="tag">Advisory</span>
-          <span class="tag">Strategy</span>
-          <span class="tag">Security</span>
+        <div class="venture-card reveal">
+          <div class="vc-cat">Wellness · Technology</div>
+          <div class="vc-icon">NW</div>
+          <div class="vc-name">Neptune Wellness</div>
+          <div class="vc-role">Interim CEO &amp; Board Member</div>
+          <p class="vc-desc">Leading Neptune Wellness through a critical growth phase — applying the same operational discipline and strategic clarity that has defined Michael's approach across every sector he has entered.</p>
+          <div class="vc-tags"><span class="tag">Wellness</span><span class="tag">Health Technology</span><span class="tag">Board Advisory</span></div>
         </div>
       </div>
     </div>
+
+    <hr class="ventures-divider">
+
+    <!-- PAST PROJECTS -->
+    <div class="ventures-group">
+      <div class="ventures-group-header reveal">
+        <div class="section-label">Past Projects</div>
+        <h2 class="section-title">Built &amp; <em>Launched</em></h2>
+      </div>
+      <div class="ventures-grid">
+        <div class="venture-card past reveal">
+          <div class="vc-cat">Luxury · Wellness</div>
+          <div class="vc-icon">PF</div>
+          <div class="vc-name">Pure Fiji</div>
+          <div class="vc-role">Executive Leadership</div>
+          <p class="vc-desc">Luxury wellness brand rooted in the natural botanicals of Fiji. A chapter that proved Michael's operating model translates across categories — from tactical intelligence to premium consumer lifestyle.</p>
+          <div class="vc-tags"><span class="tag">Luxury</span><span class="tag">Wellness</span><span class="tag">Consumer Brand</span></div>
+        </div>
+        <div class="venture-card past reveal">
+          <div class="vc-cat">Personal Protection · Gear</div>
+          <div class="vc-icon">LBG</div>
+          <div class="vc-name">Leatherback Gear</div>
+          <div class="vc-role">Founder</div>
+          <p class="vc-desc">Tactical-grade personal protection products built for people who actually use them. When every incumbent said the margins didn't work at a real-world price point, Michael found three they'd overlooked.</p>
+          <div class="vc-tags"><span class="tag">Personal Protection</span><span class="tag">Tactical Gear</span><span class="tag">Consumer Products</span></div>
+        </div>
+        <div class="venture-card past reveal">
+          <div class="vc-cat">Beverage · Performance</div>
+          <div class="vc-icon">HBC</div>
+          <div class="vc-name">Hero Beverage Co.</div>
+          <div class="vc-role">Founder</div>
+          <p class="vc-desc">No beverage industry background. No established distribution. Just a genuinely differentiated product and a founder who treats blank whiteboards as adventure maps. The lesson: deep domain expertise often prevents people from seeing the obvious solution.</p>
+          <div class="vc-tags"><span class="tag">Beverage</span><span class="tag">Performance</span><span class="tag">CPG</span></div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
