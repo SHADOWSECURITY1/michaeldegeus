@@ -416,28 +416,30 @@
         </div>
       </div>
       <div class="contact-right reveal">
-        <form class="contact-form" onsubmit="return false;">
+        <form id="contact-form" name="contact" class="contact-form" data-netlify="true" data-netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <p hidden><input name="bot-field"></p>
           <div class="form-row">
             <div class="form-field">
               <label class="form-label">First Name</label>
-              <input class="form-input" type="text" placeholder="James">
+              <input class="form-input" type="text" name="first-name" placeholder="James">
             </div>
             <div class="form-field">
               <label class="form-label">Last Name</label>
-              <input class="form-input" type="text" placeholder="Bond">
+              <input class="form-input" type="text" name="last-name" placeholder="Bond">
             </div>
           </div>
           <div class="form-field">
             <label class="form-label">Email</label>
-            <input class="form-input" type="email" placeholder="you@organization.com">
+            <input class="form-input" type="email" name="email" placeholder="you@organization.com">
           </div>
           <div class="form-field">
             <label class="form-label">Organization</label>
-            <input class="form-input" type="text" placeholder="Company or context">
+            <input class="form-input" type="text" name="organization" placeholder="Company or context">
           </div>
           <div class="form-field">
             <label class="form-label">Nature of Inquiry</label>
-            <select class="form-select form-input">
+            <select class="form-select form-input" name="inquiry-type">
               <option value="" style="background:#14141c;">Select one</option>
               <option value="advisory" style="background:#14141c;">Advisory / Strategy</option>
               <option value="security" style="background:#14141c;">Security Consulting</option>
@@ -449,9 +451,10 @@
           </div>
           <div class="form-field">
             <label class="form-label">Message</label>
-            <textarea class="form-textarea" placeholder="What are you building, solving, or exploring?"></textarea>
+            <textarea class="form-textarea" name="message" placeholder="What are you building, solving, or exploring?"></textarea>
           </div>
-          <button type="submit" class="btn-primary" style="align-self:flex-start;border:none;cursor:crosshair;">Send Message</button>
+          <div id="form-success" style="display:none;color:var(--gold);font-size:.95rem;letter-spacing:.05em;padding:.75rem 0;">Message received. I'll be in touch.</div>
+          <button type="submit" id="form-submit" class="btn-primary" style="align-self:flex-start;border:none;cursor:crosshair;">Send Message</button>
         </form>
       </div>
     </div>
@@ -508,6 +511,28 @@ document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 const hamburger=document.getElementById('hamburger'),mobileNav=document.getElementById('mobile-nav');
 if(hamburger){hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileNav.classList.toggle('open');document.body.style.overflow=mobileNav.classList.contains('open')?'hidden':'';});}
 if(mobileNav){mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hamburger.classList.remove('open');mobileNav.classList.remove('open');document.body.style.overflow='';}));}
+const contactForm=document.getElementById('contact-form');
+if(contactForm){
+  contactForm.addEventListener('submit',async function(e){
+    e.preventDefault();
+    const btn=document.getElementById('form-submit');
+    btn.textContent='Sending…';btn.disabled=true;
+    try{
+      const res=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(contactForm)).toString()});
+      if(res.ok){
+        contactForm.reset();
+        document.getElementById('form-success').style.display='block';
+        btn.style.display='none';
+      } else {
+        btn.textContent='Send Message';btn.disabled=false;
+        alert('Something went wrong. Please try again.');
+      }
+    }catch(err){
+      btn.textContent='Send Message';btn.disabled=false;
+      alert('Something went wrong. Please try again.');
+    }
+  });
+}
 </script>
 </body>
 </html>
