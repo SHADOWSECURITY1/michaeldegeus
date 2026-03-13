@@ -170,14 +170,9 @@
   #book { padding:64px 0; background:#050507; }
   .book-grid { display:grid; grid-template-columns:1fr 1.2fr; gap:96px; align-items:center; }
   .book-mockup { position:relative; perspective:800px; }
-  .book-cover { width:264px; aspect-ratio:2/3; background:linear-gradient(135deg,#0a0e1a 0%,#111828 100%); position:relative; transform:rotateY(-12deg) rotateX(3deg); transform-style:preserve-3d; box-shadow:-28px 28px 55px rgba(0,0,0,.8),inset -2px 0 8px rgba(255,255,255,.04); transition:transform .5s ease; }
+  .book-cover { width:264px; position:relative; transform:rotateY(-12deg) rotateX(3deg); transform-style:preserve-3d; box-shadow:-28px 28px 55px rgba(0,0,0,.8),inset -2px 0 8px rgba(255,255,255,.04); transition:transform .5s ease; line-height:0; }
   .book-mockup:hover .book-cover { transform:rotateY(-6deg) rotateX(1deg); }
-  .book-cover-inner { padding:28px 22px; height:100%; display:flex; flex-direction:column; justify-content:space-between; border:1px solid rgba(201,168,76,.18); }
-  .book-cover-label { font-family:'Barlow Condensed',sans-serif; font-size:.52rem; letter-spacing:.32em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
-  .book-cover-title { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:700; line-height:1.1; color:var(--white); }
-  .book-cover-sub { font-family:'Barlow',sans-serif; font-size:.6rem; font-weight:300; letter-spacing:.06em; color:var(--silver); margin-top:7px; line-height:1.5; }
-  .book-cover-decor { width:52px; height:2px; background:var(--gold); margin:10px 0; }
-  .book-cover-author { font-family:'Barlow Condensed',sans-serif; font-size:.68rem; letter-spacing:.16em; text-transform:uppercase; color:var(--silver); }
+  .book-cover img { width:100%; display:block; }
   .book-glow { position:absolute; bottom:-36px; left:50%; transform:translateX(-50%); width:180px; height:50px; background:rgba(201,168,76,.14); filter:blur(28px); pointer-events:none; }
   .book-info .section-title { margin-top:20px; margin-bottom:8px; }
   .book-byline { font-family:'Barlow Condensed',sans-serif; font-size:.75rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:26px; }
@@ -325,17 +320,7 @@
     <div class="book-grid">
       <div class="book-mockup reveal">
         <div class="book-cover">
-          <div class="book-cover-inner">
-            <div>
-              <div class="book-cover-label">Michael de Geus</div>
-              <div class="book-cover-title">The Corporate Security Playbook</div>
-              <div class="book-cover-sub">Frameworks for Assessment, Response &amp; Organizational Resilience</div>
-            </div>
-            <div>
-              <div class="book-cover-decor"></div>
-              <div class="book-cover-author">M. de Geus</div>
-            </div>
-          </div>
+          <img src="book-cover.png" alt="The Corporate Safety & Security Playbook by Michael de Geus">
         </div>
         <div class="book-glow"></div>
       </div>
