@@ -46,31 +46,6 @@
   .mobile-nav-links a:hover,.mobile-nav-links a.active { color:var(--gold); }
   .mobile-nav-cta-wrap { margin-top:36px; }
   .mobile-nav-cta { display:inline-block; font-family:'Barlow Condensed',sans-serif; font-size:.76rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--black); background:var(--gold); padding:14px 36px; text-decoration:none; }
-  #hero { position:relative; z-index:1; min-height:100vh; display:flex; align-items:flex-end; padding:0 48px 80px; overflow:hidden; background:#050507; }
-  .hero-bg { position:absolute; inset:0; background: radial-gradient(ellipse 80% 60% at 65% 45%,rgba(26,42,74,.4) 0%,transparent 65%), radial-gradient(ellipse 45% 50% at 15% 85%,rgba(139,58,26,.15) 0%,transparent 60%), linear-gradient(160deg,#050507 0%,#090c16 55%,#050507 100%); }
-  .hero-scanline { position:absolute; inset:0; background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,.012) 3px,rgba(0,0,0,.012) 4px); pointer-events:none; }
-  .hero-gold-bar { position:absolute; top:0; left:0; width:3px; height:0; background:linear-gradient(to bottom,transparent,var(--gold),transparent); animation:barDrop 2s ease-out .5s forwards; }
-  @keyframes barDrop { from{height:0;opacity:0} to{height:100%;opacity:1} }
-  .hero-content { position:relative; z-index:2; max-width:920px; opacity:0; transform:translateY(32px); animation:heroReveal 1.2s ease-out .8s forwards; }
-  @keyframes heroReveal { to{opacity:1;transform:translateY(0)} }
-  .hero-eyebrow { font-family:'Barlow Condensed',sans-serif; font-size:.67rem; font-weight:600; letter-spacing:.38em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; display:flex; align-items:center; gap:16px; }
-  .hero-eyebrow::before { content:''; display:block; width:40px; height:1px; background:var(--gold); }
-  .hero-name { font-family:'Cormorant Garamond',serif; font-size:clamp(3.8rem,9.5vw,8.5rem); font-weight:300; line-height:.9; color:var(--white); margin-bottom:6px; }
-  .hero-name span { color:var(--gold); font-style:italic; }
-  .hero-subtitle { font-family:'Barlow Condensed',sans-serif; font-size:clamp(.9rem,2vw,1.45rem); font-weight:200; letter-spacing:.5em; text-transform:uppercase; color:var(--silver); margin-top:16px; margin-bottom:36px; }
-  .hero-tagline { font-family:'Cormorant Garamond',serif; font-size:clamp(1rem,1.7vw,1.3rem); font-style:italic; font-weight:300; color:var(--off-white); max-width:600px; line-height:1.75; border-left:2px solid var(--gold); padding-left:24px; margin-bottom:48px; }
-  .hero-actions { display:flex; gap:18px; align-items:center; flex-wrap:wrap; }
-  .btn-primary { font-family:'Barlow Condensed',sans-serif; font-size:.76rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--black); background:var(--gold); border:1px solid var(--gold); padding:13px 32px; text-decoration:none; cursor:crosshair; transition:all .25s; display:inline-block; }
-  .btn-primary:hover { background:var(--gold-light); border-color:var(--gold-light); transform:translateY(-2px); }
-  .btn-ghost { font-family:'Barlow Condensed',sans-serif; font-size:.76rem; font-weight:400; letter-spacing:.2em; text-transform:uppercase; color:var(--silver); background:transparent; border:1px solid rgba(184,194,204,.3); padding:13px 32px; text-decoration:none; cursor:crosshair; transition:all .25s; display:inline-block; }
-  .btn-ghost:hover { border-color:var(--gold); color:var(--gold); }
-  .hero-scroll { position:absolute; bottom:28px; right:48px; font-family:'Barlow Condensed',sans-serif; font-size:.6rem; letter-spacing:.28em; text-transform:uppercase; color:rgba(184,194,204,.5); writing-mode:vertical-lr; animation:breathe 2.8s ease-in-out infinite; }
-  @keyframes breathe { 0%,100%{opacity:.4} 50%{opacity:.85} }
-  #marquee { background:#0a0a0e; border-top:1px solid rgba(201,168,76,.12); border-bottom:1px solid rgba(201,168,76,.12); padding:28px 0; overflow:hidden; }
-  .marquee-track { display:flex; gap:0; animation:scrollTrack 30s linear infinite; width:max-content; }
-  .marquee-item { font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-weight:300; font-style:italic; color:var(--silver); padding:0 44px; white-space:nowrap; border-right:1px solid rgba(201,168,76,.18); }
-  .marquee-item strong { font-style:normal; font-weight:600; color:var(--gold); }
-  @keyframes scrollTrack { from{transform:translateX(0)} to{transform:translateX(-50%)} }
   .section-wrap { max-width:1380px; margin:0 auto; padding:0 48px; }
   .section-label { font-family:'Barlow Condensed',sans-serif; font-size:.62rem; font-weight:600; letter-spacing:.35em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; display:flex; align-items:center; gap:14px; }
   .section-label::after { content:''; flex:1; max-width:56px; height:1px; background:var(--gold-dim); }
@@ -79,154 +54,62 @@
   .page-header { position:relative; z-index:1; padding:140px 48px 72px; background:#050507; overflow:hidden; }
   .page-header-bg { position:absolute; inset:0; background:radial-gradient(ellipse 60% 70% at 20% 50%,rgba(26,42,74,.25) 0%,transparent 65%),linear-gradient(160deg,#050507 0%,#090c16 55%,#050507 100%); }
   .page-header-bar { position:absolute; top:0; left:0; width:3px; height:0; background:linear-gradient(to bottom,transparent,var(--gold),transparent); animation:barDrop 2s ease-out .3s forwards; }
+  @keyframes barDrop { from{height:0;opacity:0} to{height:100%;opacity:1} }
   .page-header-content { position:relative; z-index:2; max-width:760px; opacity:0; transform:translateY(22px); animation:heroReveal 1s ease-out .4s forwards; }
+  @keyframes heroReveal { to{opacity:1;transform:translateY(0)} }
   .page-header-eyebrow { font-family:'Barlow Condensed',sans-serif; font-size:.67rem; font-weight:600; letter-spacing:.38em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; display:flex; align-items:center; gap:16px; }
   .page-header-eyebrow::before { content:''; display:block; width:40px; height:1px; background:var(--gold); }
   .page-header-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2.8rem,7vw,6rem); font-weight:300; line-height:.95; color:var(--white); }
   .page-header-title em { color:var(--gold); font-style:italic; }
   .page-header-sub { font-size:.9rem; line-height:1.82; color:var(--silver); margin-top:20px; max-width:520px; }
-  #about { padding:64px 0; background:#050507; }
-  .about-grid { display:grid; grid-template-columns:1fr 1.1fr; gap:80px; align-items:center; }
-  .about-photo-frame { position:relative; aspect-ratio:3/4; max-width:400px; background:var(--panel); overflow:hidden; }
-  .about-photo-frame::before { content:''; position:absolute; inset:0; z-index:2; background:linear-gradient(135deg,rgba(201,168,76,.08) 0%,transparent 55%,rgba(26,42,74,.25) 100%); }
-  .about-photo-frame::after { content:''; position:absolute; top:14px; left:14px; right:-14px; bottom:-14px; border:1px solid rgba(201,168,76,.22); z-index:0; }
-  .about-photo-frame img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; position:relative; z-index:1; }
-  .about-visual { position:relative; }
-  .about-badge { position:absolute; bottom:-18px; right:-18px; width:112px; height:112px; background:var(--gold); display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:2; }
-  .badge-num { font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:700; color:var(--black); line-height:1; }
-  .badge-text { font-family:'Barlow Condensed',sans-serif; font-size:.52rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:rgba(5,5,7,.72); text-align:center; }
-  .about-intro { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:300; line-height:1.65; color:var(--off-white); margin-top:26px; margin-bottom:22px; }
-  .about-body { font-size:.92rem; line-height:1.85; color:var(--silver); margin-bottom:16px; }
-  .about-wit { margin-top:28px; padding:20px 24px; border-left:2px solid var(--gold); background:rgba(201,168,76,.04); font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-style:italic; font-weight:300; color:var(--off-white); line-height:1.65; }
-  .about-wit span { color:var(--gold); font-style:normal; font-weight:600; }
-  .stat-row { display:flex; gap:36px; margin-top:44px; padding-top:36px; border-top:1px solid rgba(201,168,76,.1); }
-  .stat-num { font-family:'Cormorant Garamond',serif; font-size:2.6rem; font-weight:300; color:var(--gold); line-height:1; }
-  .stat-label { font-family:'Barlow Condensed',sans-serif; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:var(--silver); margin-top:4px; }
-  #origin { padding:64px 0; background:#0a0a0e; border-top:1px solid rgba(201,168,76,.08); }
-  .origin-inner { display:grid; grid-template-columns:1.1fr 1fr; gap:80px; align-items:start; }
-  .origin-text .section-title { margin-top:20px; margin-bottom:28px; }
-  .origin-body { font-size:.93rem; line-height:1.88; color:var(--silver); margin-bottom:16px; }
-  .origin-pull { font-family:'Cormorant Garamond',serif; font-size:1.22rem; font-style:italic; font-weight:300; color:var(--off-white); line-height:1.65; border-left:2px solid var(--gold); padding-left:22px; margin:28px 0; }
-  .tl-item { display:grid; grid-template-columns:78px 1fr; gap:18px; padding:22px 0; border-bottom:1px solid rgba(201,168,76,.08); cursor:default; transition:padding-left .2s; }
-  .tl-item:first-child { border-top:1px solid rgba(201,168,76,.08); }
-  .tl-item:hover { padding-left:7px; }
-  .tl-year { font-family:'Barlow Condensed',sans-serif; font-size:.76rem; font-weight:600; letter-spacing:.1em; color:var(--gold); padding-top:3px; }
-  .tl-label { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; color:var(--white); margin-bottom:5px; }
-  .tl-desc { font-size:.84rem; line-height:1.75; color:var(--silver); }
-  #field { padding:64px 0; background:#050507; }
-  .field-header { margin-bottom:60px; }
-  .field-header .section-title { margin-top:16px; max-width:580px; }
-  .field-header p { margin-top:18px; font-size:.9rem; line-height:1.82; color:var(--silver); max-width:500px; }
-  .dispatches-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
-  .dispatch { background:var(--panel); padding:40px 32px; position:relative; overflow:hidden; cursor:default; transition:background .3s; }
-  .dispatch:hover { background:#1a1a24; }
-  .dispatch::after { content:''; position:absolute; bottom:0; left:0; width:100%; height:2px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .35s; }
-  .dispatch:hover::after { transform:scaleX(1); }
-  .dispatch-num { font-family:'Barlow Condensed',sans-serif; font-size:.6rem; font-weight:600; letter-spacing:.3em; color:var(--gold-dim); margin-bottom:18px; }
-  .dispatch-hook { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:600; color:var(--white); line-height:1.3; margin-bottom:14px; }
-  .dispatch-detail { font-size:.84rem; line-height:1.78; color:var(--silver); }
-  .dispatch-outcome { margin-top:18px; display:flex; align-items:center; gap:10px; font-family:'Barlow Condensed',sans-serif; font-size:.63rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); }
-  .dispatch-outcome::before { content:''; width:22px; height:1px; background:var(--gold); }
-  #method { padding:64px 0; background:linear-gradient(160deg,#07090f 0%,#050507 50%,#07050a 100%); border-top:1px solid rgba(201,168,76,.08); border-bottom:1px solid rgba(201,168,76,.08); }
-  .method-inner { display:grid; grid-template-columns:1fr 1.4fr; gap:80px; align-items:start; }
-  .method-left .section-title { margin-top:16px; }
-  .method-left > p { margin-top:24px; font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-style:italic; color:var(--off-white); line-height:1.7; }
-  .method-dna { margin-top:36px; display:flex; flex-direction:column; gap:2px; }
-  .dna-item { display:flex; align-items:stretch; overflow:hidden; cursor:default; transition:transform .2s; }
-  .dna-item:hover { transform:translateX(6px); }
-  .dna-icon { width:52px; min-height:52px; background:rgba(201,168,76,.1); display:flex; align-items:center; justify-content:center; font-family:'Barlow Condensed',sans-serif; font-size:.7rem; font-weight:700; letter-spacing:.06em; color:var(--gold); flex-shrink:0; }
-  .dna-body { padding:14px 20px; background:rgba(255,255,255,.025); flex:1; }
-  .dna-title { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; color:var(--white); margin-bottom:4px; }
-  .dna-desc { font-size:.82rem; line-height:1.72; color:var(--silver); }
-  .method-step { padding:26px 0; border-bottom:1px solid rgba(201,168,76,.08); display:grid; grid-template-columns:44px 1fr; gap:18px; align-items:start; }
-  .method-step:first-child { border-top:1px solid rgba(201,168,76,.08); }
-  .step-num { font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:300; color:var(--gold-dim); line-height:1; }
-  .step-title { font-family:'Cormorant Garamond',serif; font-size:1.12rem; font-weight:600; color:var(--white); margin-bottom:6px; }
-  .step-desc { font-size:.85rem; line-height:1.78; color:var(--silver); }
-  .step-wit { margin-top:8px; font-family:'Cormorant Garamond',serif; font-size:.9rem; font-style:italic; color:var(--gold-dim); }
-  #ventures { padding:64px 0; background:#0a0a0e; }
-  .ventures-group { margin-bottom:80px; }
+
+  /* ── VENTURES ── */
+  #ventures { padding:64px 0 80px; background:#0a0a0e; }
+  .ventures-group { margin-bottom:72px; }
   .ventures-group-header { margin-bottom:36px; }
   .ventures-group-header .section-title { margin-top:12px; font-size:clamp(1.8rem,3.5vw,2.8rem); }
-  .ventures-divider { border:none; border-top:1px solid rgba(201,168,76,.1); margin:0 0 72px; }
-  .ventures-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
-  .venture-card { background:var(--panel); padding:38px 30px; position:relative; overflow:hidden; cursor:default; transition:transform .3s,background .3s,opacity .3s; display:block; }
-  .venture-card.past { opacity:.6; }
-  .venture-card.past:hover { opacity:1; }
+  .ventures-divider { border:none; border-top:1px solid rgba(201,168,76,.1); margin:0 0 64px; }
+
+  /* ── COVERFLOW CAROUSEL ── */
+  .cf-carousel { position:relative; padding-bottom:58px; overflow:hidden; }
+  .cf-carousel::before,.cf-carousel::after { content:''; position:absolute; top:0; bottom:58px; width:100px; z-index:15; pointer-events:none; }
+  .cf-carousel::before { left:0; background:linear-gradient(to right,#0a0a0e 20%,transparent); }
+  .cf-carousel::after  { right:0; background:linear-gradient(to left,#0a0a0e 20%,transparent); }
+  .cf-stage { position:relative; height:500px; perspective:1100px; perspective-origin:50% 42%; overflow:visible; }
+  .cf-arrow { position:absolute; top:210px; background:rgba(10,10,14,.9); border:1px solid rgba(201,168,76,.28); color:var(--gold); width:44px; height:44px; display:flex; align-items:center; justify-content:center; cursor:crosshair; z-index:20; transition:background .2s,border-color .2s; font-size:1.15rem; line-height:1; }
+  .cf-arrow:hover { background:rgba(201,168,76,.14); border-color:var(--gold); }
+  .cf-prev { left:6px; }
+  .cf-next { right:6px; }
+  .cf-dots { position:absolute; bottom:14px; left:0; right:0; display:flex; gap:8px; justify-content:center; flex-wrap:wrap; padding:0 16px; }
+  .cf-dot { width:6px; height:6px; border-radius:50%; background:rgba(201,168,76,.22); cursor:crosshair; transition:background .25s,transform .25s; border:none; padding:0; flex-shrink:0; }
+  .cf-dot.active { background:var(--gold); transform:scale(1.5); }
+
+  /* ── VENTURE CARD (in carousel) ── */
+  .cf-stage .venture-card { position:absolute; width:340px; height:460px; top:0; left:50%; margin-left:-170px; will-change:transform,opacity; transition:transform .52s cubic-bezier(.4,0,.2,1),opacity .42s ease; overflow-y:auto; scrollbar-width:thin; scrollbar-color:rgba(201,168,76,.2) transparent; }
+  .cf-stage .venture-card::-webkit-scrollbar { width:3px; }
+  .cf-stage .venture-card::-webkit-scrollbar-thumb { background:rgba(201,168,76,.25); border-radius:2px; }
+  .venture-card { background:var(--panel); padding:32px 26px; position:relative; cursor:pointer; transition:background .3s; display:block; }
+  .venture-card.cf-active { cursor:default; }
   .venture-card::before { content:''; position:absolute; bottom:0; left:0; width:100%; height:3px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .35s; }
-  .venture-card:hover::before { transform:scaleX(1); }
-  .venture-card:hover { transform:translateY(-4px); background:#161620; }
-  .venture-card:hover .vc-name { color:var(--gold); transition:color .3s; }
+  .venture-card.cf-active:hover::before { transform:scaleX(1); }
+  .venture-card.cf-active:hover { background:#161620; }
+  .venture-card.cf-active:hover .vc-name { color:var(--gold); }
   .venture-card.featured { background:linear-gradient(135deg,#0d1525 0%,#101828 100%); }
-  .vc-cat { font-family:'Barlow Condensed',sans-serif; font-size:.58rem; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:18px; }
-  .vc-icon { width:44px; height:44px; border:1px solid rgba(201,168,76,.28); display:flex; align-items:center; justify-content:center; margin-bottom:20px; font-family:'Barlow Condensed',sans-serif; font-size:.86rem; font-weight:700; letter-spacing:.05em; color:var(--gold); }
-  .vc-name { font-family:'Cormorant Garamond',serif; font-size:1.7rem; font-weight:600; color:var(--white); margin-bottom:5px; }
+  .vc-cat { font-family:'Barlow Condensed',sans-serif; font-size:.58rem; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:16px; }
+  .vc-icon { width:44px; height:44px; border:1px solid rgba(201,168,76,.28); display:flex; align-items:center; justify-content:center; margin-bottom:18px; font-family:'Barlow Condensed',sans-serif; font-size:.86rem; font-weight:700; letter-spacing:.05em; color:var(--gold); }
+  .vc-name { font-family:'Cormorant Garamond',serif; font-size:1.7rem; font-weight:600; color:var(--white); margin-bottom:5px; transition:color .3s; }
   .vc-role { font-family:'Barlow Condensed',sans-serif; font-size:.6rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:14px; }
-  .vc-desc { font-size:.87rem; line-height:1.78; color:var(--silver); }
-  .vc-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:18px; }
+  .vc-desc { font-size:.86rem; line-height:1.76; color:var(--silver); }
+  .vc-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:16px; }
   .tag { font-family:'Barlow Condensed',sans-serif; font-size:.57rem; letter-spacing:.18em; text-transform:uppercase; color:var(--silver); border:1px solid rgba(184,194,204,.18); padding:4px 9px; }
   .vc-link { display:inline-block; margin-top:14px; font-family:'Barlow Condensed',sans-serif; font-size:.63rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); text-decoration:none; transition:color .2s; }
   .vc-link::after { content:' →'; }
   .vc-link:hover { color:var(--gold-light); }
-  #book { padding:64px 0; background:#050507; }
-  .book-grid { display:grid; grid-template-columns:1fr 1.2fr; gap:96px; align-items:center; }
-  .book-mockup { position:relative; perspective:800px; }
-  .book-cover { width:264px; aspect-ratio:2/3; background:linear-gradient(135deg,#0a0e1a 0%,#111828 100%); position:relative; transform:rotateY(-12deg) rotateX(3deg); transform-style:preserve-3d; box-shadow:-28px 28px 55px rgba(0,0,0,.8),inset -2px 0 8px rgba(255,255,255,.04); transition:transform .5s ease; }
-  .book-mockup:hover .book-cover { transform:rotateY(-6deg) rotateX(1deg); }
-  .book-cover-inner { padding:28px 22px; height:100%; display:flex; flex-direction:column; justify-content:space-between; border:1px solid rgba(201,168,76,.18); }
-  .book-cover-label { font-family:'Barlow Condensed',sans-serif; font-size:.52rem; letter-spacing:.32em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
-  .book-cover-title { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:700; line-height:1.1; color:var(--white); }
-  .book-cover-sub { font-family:'Barlow',sans-serif; font-size:.6rem; font-weight:300; letter-spacing:.06em; color:var(--silver); margin-top:7px; line-height:1.5; }
-  .book-cover-decor { width:52px; height:2px; background:var(--gold); margin:10px 0; }
-  .book-cover-author { font-family:'Barlow Condensed',sans-serif; font-size:.68rem; letter-spacing:.16em; text-transform:uppercase; color:var(--silver); }
-  .book-glow { position:absolute; bottom:-36px; left:50%; transform:translateX(-50%); width:180px; height:50px; background:rgba(201,168,76,.14); filter:blur(28px); pointer-events:none; }
-  .book-info .section-title { margin-top:20px; margin-bottom:8px; }
-  .book-byline { font-family:'Barlow Condensed',sans-serif; font-size:.75rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:26px; }
-  .book-desc { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-style:italic; font-weight:300; line-height:1.75; color:var(--off-white); border-left:2px solid var(--gold); padding-left:20px; margin-bottom:20px; }
-  .book-body { font-size:.9rem; line-height:1.83; color:var(--silver); margin-bottom:28px; }
-  .book-tags { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:30px; }
+
   .quote-break { padding:60px 48px; text-align:center; position:relative; overflow:hidden; background:linear-gradient(160deg,#07090f 0%,#050507 50%,#080507 100%); border-top:1px solid rgba(201,168,76,.07); border-bottom:1px solid rgba(201,168,76,.07); }
   .quote-break::before { content:'"'; position:absolute; top:-60px; left:50%; transform:translateX(-50%); font-family:'Cormorant Garamond',serif; font-size:28rem; font-weight:700; color:rgba(201,168,76,.03); line-height:1; pointer-events:none; user-select:none; }
   .quote-text { position:relative; font-family:'Cormorant Garamond',serif; font-size:clamp(1.4rem,3vw,2.6rem); font-style:italic; font-weight:300; line-height:1.45; color:var(--white); max-width:860px; margin:0 auto 22px; }
   .quote-attr { font-family:'Barlow Condensed',sans-serif; font-size:.65rem; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); }
-  #pillars { padding:64px 0; background:#111118; border-top:1px solid rgba(201,168,76,.07); }
-  .pillars-header { text-align:center; margin-bottom:68px; }
-  .pillars-header .section-label { justify-content:center; }
-  .pillars-header .section-label::after { display:none; }
-  .pillars-header .section-title { margin-top:14px; }
-  .pillars-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(201,168,76,.07); }
-  .pillar { background:#111118; padding:44px 28px; transition:background .3s; cursor:default; }
-  .pillar:hover { background:#161620; }
-  .pillar-num { font-family:'Cormorant Garamond',serif; font-size:3.8rem; font-weight:300; color:rgba(201,168,76,.15); line-height:1; margin-bottom:20px; transition:color .3s; }
-  .pillar:hover .pillar-num { color:rgba(201,168,76,.28); }
-  .pillar-name { font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:600; color:var(--white); margin-bottom:13px; }
-  .pillar-text { font-size:.84rem; line-height:1.8; color:var(--silver); }
-  #mission { padding:64px 0; background:#050507; }
-  .mission-inner { display:grid; grid-template-columns:.85fr 1.15fr; gap:80px; align-items:start; }
-  .mission-left .section-title { margin-top:16px; font-size:clamp(2rem,4vw,3.4rem); }
-  .mission-left > p { margin-top:22px; font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-style:italic; color:var(--off-white); line-height:1.72; }
-  .mission-item { display:grid; grid-template-columns:40px 1fr; gap:18px; padding:24px 0; border-bottom:1px solid rgba(201,168,76,.08); align-items:start; transition:padding-left .2s; cursor:default; }
-  .mission-item:first-child { border-top:1px solid rgba(201,168,76,.08); }
-  .mission-item:hover { padding-left:8px; }
-  .mission-idx { font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-weight:300; color:var(--gold-dim); padding-top:2px; }
-  .mission-title { font-family:'Cormorant Garamond',serif; font-size:1.12rem; font-weight:600; color:var(--white); margin-bottom:6px; }
-  .mission-desc { font-size:.84rem; line-height:1.78; color:var(--silver); }
-  #contact { padding:64px 0; background:#0a0a0e; border-top:1px solid rgba(201,168,76,.09); }
-  .contact-inner { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:start; }
-  .contact-left .section-title { margin-top:18px; }
-  .contact-body { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-style:italic; font-weight:300; line-height:1.75; color:var(--off-white); margin-top:22px; margin-bottom:32px; }
-  .contact-meta { display:flex; flex-direction:column; gap:16px; }
-  .contact-meta-item .section-label { margin-bottom:3px; }
-  .contact-meta-item p { font-size:.85rem; color:var(--silver); line-height:1.65; }
-  .contact-right { padding-top:52px; }
-  .contact-form { display:flex; flex-direction:column; gap:13px; }
-  .form-row { display:grid; grid-template-columns:1fr 1fr; gap:13px; }
-  .form-field { display:flex; flex-direction:column; gap:5px; }
-  .form-label { font-family:'Barlow Condensed',sans-serif; font-size:.6rem; letter-spacing:.22em; text-transform:uppercase; color:var(--silver); }
-  .form-input,.form-textarea,.form-select { background:rgba(255,255,255,.03); border:1px solid rgba(201,168,76,.15); color:var(--white); font-family:'Barlow',sans-serif; font-size:.86rem; font-weight:300; padding:11px 14px; outline:none; transition:border-color .2s; width:100%; }
-  .form-input:focus,.form-textarea:focus { border-color:var(--gold); }
-  .form-textarea { resize:vertical; min-height:110px; }
-  .form-input::placeholder,.form-textarea::placeholder { color:rgba(184,194,204,.35); }
   footer { background:#050507; border-top:1px solid rgba(201,168,76,.1); padding:44px 48px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
   .footer-logo { font-family:'Cormorant Garamond',serif; font-weight:700; font-size:.95rem; letter-spacing:.3em; color:var(--gold); text-transform:uppercase; text-decoration:none; }
   .footer-links { display:flex; gap:22px; list-style:none; }
@@ -240,39 +123,19 @@
     .nav-links,.nav-cta{display:none;}
     .nav-hamburger{display:flex;}
     .mobile-nav{display:block;}
-    #hero{padding:0 22px 60px;} .hero-scroll{display:none;}
-    .hero-eyebrow{font-size:.58rem;letter-spacing:.22em;flex-wrap:wrap;gap:10px;}
-    .hero-subtitle{letter-spacing:.25em;font-size:.85rem;}
     .section-wrap{padding:0 22px;}
     .page-header{padding:110px 22px 52px;}
-    .about-grid,.origin-inner,.book-grid,.method-inner,.mission-inner,.contact-inner{grid-template-columns:1fr;gap:44px;}
-    .about-badge{width:88px;height:88px;right:-8px;bottom:-8px;}
-    .about-badge .badge-num{font-size:1.8rem;}
-    .stat-row{flex-wrap:wrap;gap:28px;margin-top:32px;padding-top:28px;}
-    .dispatches-grid,.ventures-grid,.pillars-grid{grid-template-columns:1fr;}
-    .ventures-header{flex-direction:column;align-items:flex-start;}
-    .ventures-tabs{overflow-x:auto;flex-wrap:nowrap;padding-bottom:6px;-webkit-overflow-scrolling:touch;}
-    .vtab{white-space:nowrap;flex-shrink:0;}
-    .book-cover{transform:none;width:220px;}
-    .book-mockup:hover .book-cover{transform:none;}
-    .book-grid{gap:52px;}
-    .pillars-grid{grid-template-columns:1fr 1fr;}
-    .contact-right{padding-top:0;}
+    .cf-stage{height:540px;}
+    .cf-stage .venture-card{width:clamp(260px,76vw,320px);margin-left:calc(clamp(260px,76vw,320px) / -2);}
+    .cf-arrow{top:220px;}
     footer{padding:32px 22px;flex-direction:column;align-items:flex-start;gap:16px;}
     .footer-links{flex-wrap:wrap;gap:14px 20px;}
-    .form-row{grid-template-columns:1fr;}
     .quote-break{padding:44px 22px;}
     .page-header-title{font-size:clamp(2.4rem,10vw,4.5rem);}
     .section-title{font-size:clamp(2rem,7vw,3.2rem);}
-    .method-dna{margin-top:24px;}
-    .origin-inner{gap:52px;}
-    .pillars-header{margin-bottom:44px;}
   }
   @media(max-width:480px){
-    .pillars-grid{grid-template-columns:1fr;}
-    .hero-name{font-size:clamp(3.2rem,16vw,5rem);}
-    .ventures-grid{grid-template-columns:1fr;}
-    .stat-row{gap:20px;}
+    .cf-stage .venture-card{width:clamp(240px,85vw,300px);margin-left:calc(clamp(240px,85vw,300px) / -2);}
   }
   </style>
 </head>
@@ -322,89 +185,96 @@
 
 <!-- VENTURES -->
 <section id="ventures">
-  <div class="section-wrap">
 
-    <!-- CURRENT PROJECTS -->
+  <!-- CURRENT PROJECTS -->
+  <div class="section-wrap">
     <div class="ventures-group">
       <div class="ventures-group-header reveal">
         <div class="section-label">Current Projects</div>
         <h2 class="section-title">Active &amp; <em>Building</em></h2>
       </div>
-      <div class="ventures-grid">
-        <div class="venture-card featured reveal">
-          <div class="vc-cat">Security · Intelligence</div>
-          <div class="vc-icon">SHD</div>
-          <div class="vc-name">Shadow</div>
-          <div class="vc-role">Founder &amp; CEO</div>
-          <p class="vc-desc">The intelligence-first security platform built from field-tested frameworks. Predictive, proactive, and invisible by design — turning ambient signals into protective certainty before threats materialize.</p>
-          <div class="vc-tags"><span class="tag">Corporate Security</span><span class="tag">Intelligence</span><span class="tag">Executive Protection</span></div>
-          <a href="https://www.shdw.com" class="vc-link" target="_blank" rel="noopener">Visit</a>
-        </div>
-        <div class="venture-card reveal">
-          <div class="vc-cat">AI · Technology</div>
-          <div class="vc-icon">MP</div>
-          <div class="vc-name">Memory Packs</div>
-          <div class="vc-role">Founder</div>
-          <p class="vc-desc">AI intelligence upgrades that give people and organizations a genuine cognitive edge. Built on the premise that the best tools extend human capability without replacing human judgment.</p>
-          <div class="vc-tags"><span class="tag">Artificial Intelligence</span><span class="tag">Technology</span><span class="tag">Productivity</span></div>
-          <a href="https://www.memorypacks.ai" class="vc-link" target="_blank" rel="noopener">Visit</a>
-        </div>
-        <div class="venture-card reveal">
-          <div class="vc-cat">Baseball/Softball Innovation</div>
-          <div class="vc-icon">TSL</div>
-          <div class="vc-name">Tee Sleeves</div>
-          <div class="vc-role">Founder</div>
-          <p class="vc-desc">A purpose-built solution that solved a real problem for baseball and softball players elegantly. Proof that the same first-principles thinking that works in security works equally well in consumer products.</p>
-          <div class="vc-tags"><span class="tag">Baseball</span><span class="tag">Softball</span><span class="tag">Apparel</span></div>
-          <a href="https://www.teesleeves.com" class="vc-link" target="_blank" rel="noopener">Visit</a>
-        </div>
-        <div class="venture-card reveal">
-          <div class="vc-cat">Marine · Operations</div>
-          <div class="vc-icon">HDM</div>
-          <div class="vc-name">Hero Diving &amp; Marine</div>
-          <div class="vc-role">Founder</div>
-          <p class="vc-desc">Professional-grade marine and diving operations where safety is a feature, not a footnote. When the water is the terrain, precision and preparation aren't optional — they're the product.</p>
-          <div class="vc-tags"><span class="tag">Marine</span><span class="tag">Diving</span><span class="tag">Operations</span></div>
-          <a href="https://www.herodivingandmarine.com" class="vc-link" target="_blank" rel="noopener">Visit</a>
-        </div>
-        <div class="venture-card reveal">
-          <div class="vc-cat">Foundation · Philanthropy</div>
-          <div class="vc-icon">THF</div>
-          <div class="vc-name">The Hero Foundation</div>
-          <div class="vc-role">Founder</div>
-          <p class="vc-desc">A foundation built for heroes who deserve a better shot. The Hero Foundation funds mission-driven individuals who protect, serve, and sacrifice — ensuring that those who give the most have access to the resources they need.</p>
-          <div class="vc-tags"><span class="tag">Foundation</span><span class="tag">Philanthropy</span><span class="tag">Mission-Driven</span></div>
-          <a href="https://herodivingandmarine.com/pages/the-hero-foundation" class="vc-link" target="_blank" rel="noopener">Visit</a>
-        </div>
-        <div class="venture-card reveal">
-          <div class="vc-cat">Venture · Platform</div>
-          <div class="vc-icon">THR</div>
-          <div class="vc-name">Team HERO</div>
-          <div class="vc-role">Founder</div>
-          <p class="vc-desc">Shark Tank for Heroes. A platform that gives mission-driven entrepreneurs — veterans, first responders, and public servants — the stage, funding, and mentorship to build the ventures they've earned the right to build.</p>
-          <div class="vc-tags"><span class="tag">Venture Platform</span><span class="tag">Entrepreneurship</span><span class="tag">Heroes</span></div>
-          <a href="https://herodivingandmarine.com/pages/teamhero" class="vc-link" target="_blank" rel="noopener">Visit</a>
-        </div>
-        <div class="venture-card reveal">
-          <div class="vc-cat">Wellness · Technology</div>
-          <div class="vc-icon">NW</div>
-          <div class="vc-name">Neptune Wellness</div>
-          <div class="vc-role">Interim CEO &amp; Board Member</div>
-          <p class="vc-desc">Leading Neptune Wellness through a critical restructuring phase — applying the same operational discipline and strategic clarity that has defined Michael's approach across every sector he has entered.</p>
-          <div class="vc-tags"><span class="tag">Wellness</span><span class="tag">Health Technology</span><span class="tag">Board Advisory</span></div>
-        </div>
-        <div class="venture-card reveal">
-          <div class="vc-cat">Health · Advisory</div>
-          <div class="vc-icon">DB</div>
-          <div class="vc-name">Dr. Bizal</div>
-          <div class="vc-role">Partner &amp; Advisor</div>
-          <p class="vc-desc">A collaboration rooted in shared conviction: that the intersection of health, performance, and human optimization is where the most important work gets done. Dr. Bizal brings the science. Michael brings the operational framework.</p>
-          <div class="vc-tags"><span class="tag">Health</span><span class="tag">Performance</span><span class="tag">Advisory</span></div>
-          <a href="https://www.drbizal.com" class="vc-link" target="_blank" rel="noopener">Visit</a>
-        </div>
+    </div>
+  </div>
+  <div class="cf-carousel" id="cf-current">
+    <button class="cf-arrow cf-prev" aria-label="Previous">&#8592;</button>
+    <div class="cf-stage">
+      <div class="venture-card featured">
+        <div class="vc-cat">Security · Intelligence</div>
+        <div class="vc-icon">SHD</div>
+        <div class="vc-name">Shadow</div>
+        <div class="vc-role">Founder &amp; CEO</div>
+        <p class="vc-desc">The intelligence-first security platform built from field-tested frameworks. Predictive, proactive, and invisible by design — turning ambient signals into protective certainty before threats materialize.</p>
+        <div class="vc-tags"><span class="tag">Corporate Security</span><span class="tag">Intelligence</span><span class="tag">Executive Protection</span></div>
+        <a href="https://www.shdw.com" class="vc-link" target="_blank" rel="noopener">Visit</a>
+      </div>
+      <div class="venture-card">
+        <div class="vc-cat">AI · Technology</div>
+        <div class="vc-icon">MP</div>
+        <div class="vc-name">Memory Packs</div>
+        <div class="vc-role">Founder</div>
+        <p class="vc-desc">AI intelligence upgrades that give people and organizations a genuine cognitive edge. Built on the premise that the best tools extend human capability without replacing human judgment.</p>
+        <div class="vc-tags"><span class="tag">Artificial Intelligence</span><span class="tag">Technology</span><span class="tag">Productivity</span></div>
+        <a href="https://www.memorypacks.ai" class="vc-link" target="_blank" rel="noopener">Visit</a>
+      </div>
+      <div class="venture-card">
+        <div class="vc-cat">Baseball/Softball Innovation</div>
+        <div class="vc-icon">TSL</div>
+        <div class="vc-name">Tee Sleeves</div>
+        <div class="vc-role">Founder</div>
+        <p class="vc-desc">A purpose-built solution that solved a real problem for baseball and softball players elegantly. Proof that the same first-principles thinking that works in security works equally well in consumer products.</p>
+        <div class="vc-tags"><span class="tag">Baseball</span><span class="tag">Softball</span><span class="tag">Apparel</span></div>
+        <a href="https://www.teesleeves.com" class="vc-link" target="_blank" rel="noopener">Visit</a>
+      </div>
+      <div class="venture-card">
+        <div class="vc-cat">Marine · Operations</div>
+        <div class="vc-icon">HDM</div>
+        <div class="vc-name">Hero Diving &amp; Marine</div>
+        <div class="vc-role">Founder</div>
+        <p class="vc-desc">Professional-grade marine and diving operations where safety is a feature, not a footnote. When the water is the terrain, precision and preparation aren't optional — they're the product.</p>
+        <div class="vc-tags"><span class="tag">Marine</span><span class="tag">Diving</span><span class="tag">Operations</span></div>
+        <a href="https://www.herodivingandmarine.com" class="vc-link" target="_blank" rel="noopener">Visit</a>
+      </div>
+      <div class="venture-card">
+        <div class="vc-cat">Foundation · Philanthropy</div>
+        <div class="vc-icon">THF</div>
+        <div class="vc-name">The Hero Foundation</div>
+        <div class="vc-role">Founder</div>
+        <p class="vc-desc">A foundation built for heroes who deserve a better shot. The Hero Foundation funds mission-driven individuals who protect, serve, and sacrifice — ensuring that those who give the most have access to the resources they need.</p>
+        <div class="vc-tags"><span class="tag">Foundation</span><span class="tag">Philanthropy</span><span class="tag">Mission-Driven</span></div>
+        <a href="https://herodivingandmarine.com/pages/the-hero-foundation" class="vc-link" target="_blank" rel="noopener">Visit</a>
+      </div>
+      <div class="venture-card">
+        <div class="vc-cat">Venture · Platform</div>
+        <div class="vc-icon">THR</div>
+        <div class="vc-name">Team HERO</div>
+        <div class="vc-role">Founder</div>
+        <p class="vc-desc">Shark Tank for Heroes. A platform that gives mission-driven entrepreneurs — veterans, first responders, and public servants — the stage, funding, and mentorship to build the ventures they've earned the right to build.</p>
+        <div class="vc-tags"><span class="tag">Venture Platform</span><span class="tag">Entrepreneurship</span><span class="tag">Heroes</span></div>
+        <a href="https://herodivingandmarine.com/pages/teamhero" class="vc-link" target="_blank" rel="noopener">Visit</a>
+      </div>
+      <div class="venture-card">
+        <div class="vc-cat">Wellness · Technology</div>
+        <div class="vc-icon">NW</div>
+        <div class="vc-name">Neptune Wellness</div>
+        <div class="vc-role">Interim CEO &amp; Board Member</div>
+        <p class="vc-desc">Leading Neptune Wellness through a critical restructuring phase — applying the same operational discipline and strategic clarity that has defined Michael's approach across every sector he has entered.</p>
+        <div class="vc-tags"><span class="tag">Wellness</span><span class="tag">Health Technology</span><span class="tag">Board Advisory</span></div>
+      </div>
+      <div class="venture-card">
+        <div class="vc-cat">Health · Advisory</div>
+        <div class="vc-icon">DB</div>
+        <div class="vc-name">Dr. Bizal</div>
+        <div class="vc-role">Partner &amp; Advisor</div>
+        <p class="vc-desc">A collaboration rooted in shared conviction: that the intersection of health, performance, and human optimization is where the most important work gets done. Dr. Bizal brings the science. Michael brings the operational framework.</p>
+        <div class="vc-tags"><span class="tag">Health</span><span class="tag">Performance</span><span class="tag">Advisory</span></div>
+        <a href="https://www.drbizal.com" class="vc-link" target="_blank" rel="noopener">Visit</a>
       </div>
     </div>
+    <button class="cf-arrow cf-next" aria-label="Next">&#8594;</button>
+    <div class="cf-dots"></div>
+  </div>
 
+  <div class="section-wrap">
     <hr class="ventures-divider">
 
     <!-- PAST PROJECTS -->
@@ -413,35 +283,40 @@
         <div class="section-label">Past Projects</div>
         <h2 class="section-title">Built from <em>Scratch</em></h2>
       </div>
-      <div class="ventures-grid">
-        <div class="venture-card past reveal">
-          <div class="vc-cat">Luxury · Wellness</div>
-          <div class="vc-icon">PF</div>
-          <div class="vc-name">Pure Fiji</div>
-          <div class="vc-role">Executive Leadership</div>
-          <p class="vc-desc">Luxury wellness brand rooted in the natural botanicals of Fiji. A chapter that proved Michael's operating model translates across categories — from tactical intelligence to premium consumer lifestyle.</p>
-          <div class="vc-tags"><span class="tag">Luxury</span><span class="tag">Wellness</span><span class="tag">Consumer Brand</span></div>
-        </div>
-        <div class="venture-card past reveal">
-          <div class="vc-cat">Personal Protection · Gear</div>
-          <div class="vc-icon">LBG</div>
-          <div class="vc-name">Leatherback Gear</div>
-          <div class="vc-role">Founder</div>
-          <p class="vc-desc">Tactical-grade personal protection products built for people who actually use them. When every incumbent said the margins didn't work at a real-world price point, Michael found three they'd overlooked.</p>
-          <div class="vc-tags"><span class="tag">Personal Protection</span><span class="tag">Tactical Gear</span><span class="tag">Consumer Products</span></div>
-        </div>
-        <div class="venture-card past reveal">
-          <div class="vc-cat">Beverage · Performance</div>
-          <div class="vc-icon">HBC</div>
-          <div class="vc-name">Hero Beverage Co.</div>
-          <div class="vc-role">Founder</div>
-          <p class="vc-desc">No beverage industry background. No established distribution. Just a genuinely differentiated product and a founder who treats blank whiteboards as adventure maps. The lesson: deep domain expertise often prevents people from seeing the obvious solution.</p>
-          <div class="vc-tags"><span class="tag">Beverage</span><span class="tag">Performance</span><span class="tag">CPG</span></div>
-        </div>
+    </div>
+  </div>
+  <div class="cf-carousel" id="cf-past">
+    <button class="cf-arrow cf-prev" aria-label="Previous">&#8592;</button>
+    <div class="cf-stage">
+      <div class="venture-card past">
+        <div class="vc-cat">Luxury · Wellness</div>
+        <div class="vc-icon">PF</div>
+        <div class="vc-name">Pure Fiji</div>
+        <div class="vc-role">Executive Leadership</div>
+        <p class="vc-desc">Luxury wellness brand rooted in the natural botanicals of Fiji. A chapter that proved Michael's operating model translates across categories — from tactical intelligence to premium consumer lifestyle.</p>
+        <div class="vc-tags"><span class="tag">Luxury</span><span class="tag">Wellness</span><span class="tag">Consumer Brand</span></div>
+      </div>
+      <div class="venture-card past">
+        <div class="vc-cat">Personal Protection · Gear</div>
+        <div class="vc-icon">LBG</div>
+        <div class="vc-name">Leatherback Gear</div>
+        <div class="vc-role">Founder</div>
+        <p class="vc-desc">Tactical-grade personal protection products built for people who actually use them. When every incumbent said the margins didn't work at a real-world price point, Michael found three they'd overlooked.</p>
+        <div class="vc-tags"><span class="tag">Personal Protection</span><span class="tag">Tactical Gear</span><span class="tag">Consumer Products</span></div>
+      </div>
+      <div class="venture-card past">
+        <div class="vc-cat">Beverage · Performance</div>
+        <div class="vc-icon">HBC</div>
+        <div class="vc-name">Hero Beverage Co.</div>
+        <div class="vc-role">Founder</div>
+        <p class="vc-desc">No beverage industry background. No established distribution. Just a genuinely differentiated product and a founder who treats blank whiteboards as adventure maps. The lesson: deep domain expertise often prevents people from seeing the obvious solution.</p>
+        <div class="vc-tags"><span class="tag">Beverage</span><span class="tag">Performance</span><span class="tag">CPG</span></div>
       </div>
     </div>
-
+    <button class="cf-arrow cf-next" aria-label="Next">&#8594;</button>
+    <div class="cf-dots"></div>
   </div>
+
 </section>
 
 <!-- QUOTE BREAK -->
@@ -500,13 +375,68 @@ document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 const hamburger=document.getElementById('hamburger'),mobileNav=document.getElementById('mobile-nav');
 if(hamburger){hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileNav.classList.toggle('open');document.body.style.overflow=mobileNav.classList.contains('open')?'hidden':'';});}
 if(mobileNav){mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hamburger.classList.remove('open');mobileNav.classList.remove('open');document.body.style.overflow='';}));}
-function filterV(cat,btn){
-  document.querySelectorAll('.vtab').forEach(t=>t.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.venture-card').forEach(c=>{
-    (cat==='all'||c.dataset.cat===cat)?c.classList.add('show'):c.classList.remove('show');
-  });
+
+/* ── COVERFLOW CAROUSEL ── */
+class CoverflowCarousel {
+  constructor(el) {
+    this.el = el;
+    this.stage = el.querySelector('.cf-stage');
+    this.cards = Array.from(el.querySelectorAll('.venture-card'));
+    this.dotsEl = el.querySelector('.cf-dots');
+    this.n = this.cards.length;
+    this.idx = 0;
+    this._startX = 0;
+    this._build();
+    this._render();
+  }
+  _build() {
+    this.cards.forEach((_, i) => {
+      const d = document.createElement('button');
+      d.className = 'cf-dot';
+      d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      d.addEventListener('click', () => this.go(i));
+      this.dotsEl.appendChild(d);
+    });
+    this.el.querySelector('.cf-prev').addEventListener('click', () => this.go(this.idx - 1));
+    this.el.querySelector('.cf-next').addEventListener('click', () => this.go(this.idx + 1));
+    this.cards.forEach((c, i) => c.addEventListener('click', () => { if (i !== this.idx) this.go(i); }));
+    this.stage.addEventListener('touchstart', e => { this._startX = e.touches[0].clientX; }, {passive:true});
+    this.stage.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - this._startX;
+      if (Math.abs(dx) > 44) this.go(this.idx + (dx < 0 ? 1 : -1));
+    });
+  }
+  go(i) {
+    this.idx = Math.max(0, Math.min(this.n - 1, i));
+    this._render();
+  }
+  _render() {
+    const TX = [0, 290, 510];
+    const RY = [0, 46, 58];
+    const SC = [1, 0.83, 0.67];
+    const OP = [1, 0.68, 0.38];
+    this.cards.forEach((c, i) => {
+      const off = i - this.idx;
+      const abs = Math.abs(off);
+      const sign = off < 0 ? -1 : 1;
+      if (abs > 2) {
+        c.style.opacity = '0';
+        c.style.pointerEvents = 'none';
+        c.style.zIndex = '0';
+        c.style.transform = 'translateX(' + (sign * 700) + 'px) rotateY(' + (-sign * 65) + 'deg) scale(0.5)';
+        c.classList.remove('cf-active');
+      } else {
+        c.style.opacity = String(OP[abs]);
+        c.style.pointerEvents = 'auto';
+        c.style.zIndex = String(10 - abs);
+        c.style.transform = 'translateX(' + (sign * TX[abs]) + 'px) rotateY(' + (-sign * RY[abs]) + 'deg) scale(' + SC[abs] + ')';
+        c.classList.toggle('cf-active', abs === 0);
+      }
+    });
+    this.dotsEl.querySelectorAll('.cf-dot').forEach((d, i) => d.classList.toggle('active', i === this.idx));
+  }
 }
+document.querySelectorAll('.cf-carousel').forEach(el => new CoverflowCarousel(el));
 </script>
 </body>
 </html>
