@@ -179,6 +179,28 @@
   .book-desc { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-style:italic; font-weight:300; line-height:1.75; color:var(--off-white); border-left:2px solid var(--gold); padding-left:20px; margin-bottom:20px; }
   .book-body { font-size:.9rem; line-height:1.83; color:var(--silver); margin-bottom:28px; }
   .book-tags { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:30px; }
+  #series { padding:64px 0; background:#050507; }
+  .series-intro { max-width:680px; margin-bottom:54px; }
+  .series-intro .section-title { margin-top:14px; margin-bottom:18px; }
+  .series-intro p { font-size:.95rem; line-height:1.85; color:var(--silver); }
+  .series-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; align-items:stretch; }
+  .series-card { display:flex; flex-direction:column; background:var(--panel); border:1px solid rgba(201,168,76,.1); transition:transform .35s ease,border-color .35s ease; }
+  .series-card:hover { transform:translateY(-6px); border-color:rgba(201,168,76,.32); }
+  .series-cover { position:relative; line-height:0; overflow:hidden; background:#08080d; }
+  .series-cover img { width:100%; display:block; transition:transform .6s ease; }
+  .series-card:hover .series-cover img { transform:scale(1.035); }
+  .series-cover::after { content:''; position:absolute; inset:0; background:linear-gradient(to top,rgba(5,5,7,.55) 0%,transparent 32%); pointer-events:none; }
+  .series-body { display:flex; flex-direction:column; flex:1; padding:28px 26px 30px; }
+  .series-num { font-family:'Barlow Condensed',sans-serif; font-size:.6rem; font-weight:600; letter-spacing:.32em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:12px; }
+  .series-name { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:600; line-height:1.18; color:var(--white); margin-bottom:9px; }
+  .series-sub { font-family:'Barlow Condensed',sans-serif; font-size:.72rem; font-weight:400; letter-spacing:.06em; text-transform:uppercase; color:var(--gold); line-height:1.5; margin-bottom:16px; }
+  .series-desc { font-size:.86rem; line-height:1.8; color:var(--silver); margin-bottom:20px; }
+  .series-tags { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:22px; }
+  .series-foot { margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:12px; padding-top:18px; border-top:1px solid rgba(201,168,76,.1); }
+  .series-status { font-family:'Barlow Condensed',sans-serif; font-size:.58rem; letter-spacing:.2em; text-transform:uppercase; color:rgba(184,194,204,.7); }
+  .series-link { font-family:'Barlow Condensed',sans-serif; font-size:.64rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); text-decoration:none; white-space:nowrap; transition:color .2s; }
+  .series-link::after { content:' →'; }
+  .series-link:hover { color:var(--gold-light); }
   .quote-break { padding:60px 48px; text-align:center; position:relative; overflow:hidden; background:linear-gradient(160deg,#07090f 0%,#050507 50%,#080507 100%); border-top:1px solid rgba(201,168,76,.07); border-bottom:1px solid rgba(201,168,76,.07); }
   .quote-break::before { content:'"'; position:absolute; top:-60px; left:50%; transform:translateX(-50%); font-family:'Cormorant Garamond',serif; font-size:28rem; font-weight:700; color:rgba(201,168,76,.03); line-height:1; pointer-events:none; user-select:none; }
   .quote-text { position:relative; font-family:'Cormorant Garamond',serif; font-size:clamp(1.4rem,3vw,2.6rem); font-style:italic; font-weight:300; line-height:1.45; color:var(--white); max-width:860px; margin:0 auto 22px; }
@@ -245,6 +267,7 @@
     .about-badge .badge-num{font-size:1.8rem;}
     .stat-row{flex-wrap:wrap;gap:28px;margin-top:32px;padding-top:28px;}
     .dispatches-grid,.ventures-grid,.pillars-grid{grid-template-columns:1fr;}
+    .series-grid{grid-template-columns:1fr;max-width:400px;margin:0 auto;gap:28px;}
     .ventures-header{flex-direction:column;align-items:flex-start;}
     .ventures-tabs{overflow-x:auto;flex-wrap:nowrap;padding-bottom:6px;-webkit-overflow-scrolling:touch;}
     .vtab{white-space:nowrap;flex-shrink:0;}
@@ -269,6 +292,9 @@
     .ventures-grid{grid-template-columns:1fr;}
     .stat-row{gap:20px;}
   }
+  /* Editorial: italics removed except direct quotes (.quote-text, .origin-pull, .step-wit, .book-desc) */
+  em, .hero-name span, .hero-tagline, .marquee-item, .section-title em, .page-header-title em,
+  .about-wit, .method-left > p, .mission-left > p, .contact-body { font-style:normal; }
   </style>
 </head>
 <body>
@@ -309,42 +335,89 @@
   <div class="page-header-bg"></div>
   <div class="page-header-bar"></div>
   <div class="page-header-content">
-    <div class="page-header-eyebrow">The Definitive Work</div>
-    <h1 class="page-header-title">The Corporate<br>Security <em>Playbook</em></h1>
-    <p class="page-header-sub">Not a theoretical book written from the outside looking in. Written while running the operations it describes — every framework field-tested the same week it was committed to the page.</p>
+    <div class="page-header-eyebrow">Publications · The Shadow Series</div>
+    <h1 class="page-header-title">The Playbook<br><em>Series</em></h1>
+    <p class="page-header-sub">Three books. Nearly two decades of field experience in federal service and the private sector — distilled into operational doctrine on corporate security, executive protection, and event safety. All titles publishing 2026.</p>
   </div>
 </div>
 
-<!-- BOOK -->
-<section id="book">
+<!-- SERIES -->
+<section id="series">
   <div class="section-wrap">
-    <div class="book-grid">
-      <div class="book-mockup reveal">
-        <div class="book-cover">
-          <img src="book-cover.png" alt="The Corporate Safety & Security Playbook by Michael de Geus">
+    <div class="series-intro reveal">
+      <div class="section-label">The Series</div>
+      <h2 class="section-title">Three books. One <em>doctrine</em>.</h2>
+      <p>Written by Michael de Geus from nearly two decades protecting people, places, and events — from the United States Secret Service Presidential Protection Division to Fortune 500 boardrooms and global stadium tours. Each volume turns field-tested method into doctrine you can run.</p>
+    </div>
+    <div class="series-grid">
+
+      <article class="series-card reveal">
+        <div class="series-cover">
+          <img src="playbook-book1-cover.jpg" alt="The Corporate Safety &amp; Security Playbook by Michael de Geus">
         </div>
-        <div class="book-glow"></div>
-      </div>
-      <div class="book-info">
-        <div class="section-label reveal">The Book</div>
-        <h2 class="section-title reveal">The Corporate Security<br><em>Playbook</em></h2>
-        <div class="book-byline reveal">By Michael de Geus</div>
-        <p class="book-desc reveal">"The threat you prepared for is never the one that arrives. The only preparation that transfers is the mindset you build before either one shows up."</p>
-        <p class="book-body reveal">Written in the field. Validated under pressure. The Corporate Security Playbook is the definitive operational guide for security professionals, executives, and organizations navigating a threat landscape that changes faster than most training programs can track.</p>
-        <p class="book-body reveal">Michael wrote this book while actively running the security operations it describes. Every framework, every assessment protocol, every response architecture — field-tested in real conditions with real stakes before it was committed to the page. The result is a text that reads less like a manual and more like a debrief from someone who was actually there.</p>
-        <div class="book-tags reveal">
-          <span class="tag">Corporate Security</span>
-          <span class="tag">Risk Assessment</span>
-          <span class="tag">Crisis Response</span>
-          <span class="tag">Executive Protection</span>
-          <span class="tag">Organizational Resilience</span>
-          <span class="tag">Threat Intelligence</span>
+        <div class="series-body">
+          <div class="series-num">Book One</div>
+          <h3 class="series-name">The Corporate Safety &amp; Security Playbook</h3>
+          <div class="series-sub">Redefining Protection, Intelligence &amp; Resilience for the Modern Enterprise</div>
+          <p class="series-desc">Advance methodology, venue operations, crowd dynamics, command and coordination, and mass casualty planning. Nearly 200 pages of operational doctrine drawn from 500-plus events across four continents — written for event producers, security directors, and anyone responsible for keeping a large gathering safe.</p>
+          <div class="series-tags">
+            <span class="tag">Corporate Safety</span>
+            <span class="tag">Event Security</span>
+            <span class="tag">Operational Doctrine</span>
+          </div>
+          <div class="series-foot">
+            <span class="series-status">Publishing 2026</span>
+            <a class="series-link" href="https://www.shdw.com/events/insight-playbook-book1" target="_blank" rel="noopener">Read Excerpt</a>
+          </div>
         </div>
-        <div class="hero-actions reveal">
-          <a href="index.html#contact" class="btn-primary">Request a Copy</a>
-          <a href="index.html#contact" class="btn-ghost">Speaking &amp; Workshops</a>
+      </article>
+
+      <article class="series-card reveal">
+        <div class="series-cover">
+          <img src="playbook-book2-cover.jpg" alt="The Executive Protection Playbook by Michael de Geus">
         </div>
-      </div>
+        <div class="series-body">
+          <div class="series-num">Book Two</div>
+          <h3 class="series-name">The Executive Protection Playbook</h3>
+          <div class="series-sub">Doctrine, Methodology, and the Discipline of the Advance</div>
+          <p class="series-desc">The complete methodology for close personal protection — the principal relationship, detail design, advance, motorcades, arrival and egress choreography, and the moments of greatest exposure. Drawn from U.S. Secret Service PPD training and a decade of private-sector principal protection.</p>
+          <div class="series-tags">
+            <span class="tag">Executive Protection</span>
+            <span class="tag">Personal Protection</span>
+            <span class="tag">Protective Operations</span>
+          </div>
+          <div class="series-foot">
+            <span class="series-status">Publishing 2026</span>
+            <a class="series-link" href="https://www.shdw.com/events/insight-playbook-book2" target="_blank" rel="noopener">Read Excerpt</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="series-card reveal">
+        <div class="series-cover">
+          <img src="playbook-book3-cover.jpg" alt="The Event Safety &amp; Protection Playbook by Michael de Geus">
+        </div>
+        <div class="series-body">
+          <div class="series-num">Book Three</div>
+          <h3 class="series-name">The Event Safety &amp; Protection Playbook</h3>
+          <div class="series-sub">Strategies, Systems, and Standards for Safe, Successful, and Secure Events</div>
+          <p class="series-desc">The full scope of Shadow doctrine in a single volume — events, executive protection, and the intelligence and advance work that governs both. The standards and systems behind safe, successful, and secure events at every scale.</p>
+          <div class="series-tags">
+            <span class="tag">Event Safety</span>
+            <span class="tag">Protection</span>
+            <span class="tag">Shadow Doctrine</span>
+          </div>
+          <div class="series-foot">
+            <span class="series-status">Publishing 2026</span>
+            <a class="series-link" href="https://www.shdw.com/events/insight-playbook-book3" target="_blank" rel="noopener">Read Excerpt</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+    <div class="hero-actions reveal" style="margin-top:52px;">
+      <a href="index.html#contact" class="btn-primary">Request the Series</a>
+      <a href="index.html#contact" class="btn-ghost">Speaking &amp; Workshops</a>
     </div>
   </div>
 </section>
@@ -352,7 +425,7 @@
 <!-- QUOTE BREAK -->
 <div class="quote-break">
   <p class="quote-text reveal">"The threat you prepared for is never the one that arrives. The mindset you build is the only preparation that actually transfers."</p>
-  <div class="quote-attr reveal">— Michael de Geus · The Corporate Security Playbook</div>
+  <div class="quote-attr reveal">— Michael de Geus · The Shadow Playbook Series</div>
 </div>
 
 <!-- PILLARS -->
