@@ -1,0 +1,7 @@
+# Static site (published from repo root, configured in the Netlify UI).
+# This file only declares the serverless functions directory so the
+# form-notification email function (netlify/functions/submission-created.js)
+# is deployed.
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
